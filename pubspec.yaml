@@ -52,6 +52,9 @@ flutter:
     - images/carousel/w1.jpeg
     - images/carousel/w3.jpeg
     - images/carousel/w4.jpeg
+    - images/cats/accessories.png
+    - images/cats/dress.png
+    - images/cats/formal.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
