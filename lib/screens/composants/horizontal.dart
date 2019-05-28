@@ -13,7 +13,11 @@ class Horizontal extends StatelessWidget {
             sousTitre: "Test",
           ),
           Categorie(
-            titre: "images/cats/dress.png",
+            titre: "images/cats/accessories.png",
+            sousTitre: "Test",
+          ),
+          Categorie(
+            titre: "images/cats/formal.png",
             sousTitre: "Test",
           ),
           Categorie(
@@ -21,21 +25,13 @@ class Horizontal extends StatelessWidget {
             sousTitre: "Test",
           ),
           Categorie(
-            titre: "images/cats/dress.png",
+            titre: "images/cats/accessories.png",
             sousTitre: "Test",
           ),
           Categorie(
-            titre: "images/cats/dress.png",
+            titre: "images/cats/formal.png",
             sousTitre: "Test",
           ),
-          Categorie(
-            titre: "images/cats/dress.png",
-            sousTitre: "Test",
-          ),
-          Categorie(
-            titre: "images/cats/dress.png",
-            sousTitre: "Test",
-          )
         ],
       ),
     );
@@ -43,7 +39,6 @@ class Horizontal extends StatelessWidget {
 }
 
 class Categorie extends StatelessWidget {
-
   String titre, sousTitre;
 
   Categorie({this.titre, this.sousTitre});
@@ -51,20 +46,22 @@ class Categorie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(5.0),
-      child: InkWell(
-        onTap: null,
-        child: Container(
-          width: 100.0,
-          child: ListTile(
-            title: Image.asset(titre, width: 90.0, height: 80.0,),
-            subtitle: Container(
-              alignment: Alignment.center,
-              child: Text(sousTitre),
-            ),
-          ),
-        )
-      )
-    );
+        padding: EdgeInsets.all(5.0),
+        child: InkWell(
+            onTap: null,
+            child: Container(
+              width: 100.0,
+              child: ListTile(
+                title: Image.asset(
+                  titre,
+                  width: 90.0,
+                  height: 80.0,
+                ),
+                subtitle: Container(
+                  alignment: Alignment.center,
+                  child: Text(sousTitre),
+                ),
+              ),
+            )));
   }
 }
