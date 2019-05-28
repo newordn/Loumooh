@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:loumo_app/screens/composants/horizontal.dart';
 class Index extends StatefulWidget {
   @override
   _IndexState createState() => _IndexState();
@@ -129,7 +130,8 @@ Widget buildBody() {
       Padding(
         padding: EdgeInsets.all(8.0),
         child: Text("Categories")
-      )
+      ),
+      Horizontal()
     ]
     
   );
