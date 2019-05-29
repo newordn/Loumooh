@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:loumo_app/login_signup/signup.dart';
 
 void main() => runApp(
       MaterialApp(
-        home: MySignUp(),
+        home: Login(),
         debugShowCheckedModeBanner: false,
       ),
     );
 
-class MySignUp extends StatelessWidget {
+class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -95,7 +96,10 @@ class MySignUp extends StatelessWidget {
                   width: 250.0,
                   height: 40.0,
                   child: InkWell(
-                    onTap: null,
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => SignUp()));
+                    },
                     child: Material(
                         borderRadius: BorderRadius.circular(20.0),
                         color: Colors.blueGrey,

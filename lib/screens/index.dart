@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:loumo_app/screens/composants/horizontal.dart';
 import 'package:loumo_app/login_signup/login.dart';
+import 'package:loumo_app/login_signup/signup.dart';
 
 class Index extends StatefulWidget {
   @override
@@ -41,7 +42,7 @@ class _IndexState extends State<Index> {
                   InkWell(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => MySignUp()));
+                          MaterialPageRoute(builder: (context) => Login()));
                     },
                     child: Text(
                       "Se connecter",
@@ -51,7 +52,13 @@ class _IndexState extends State<Index> {
                   Container(
                       margin: EdgeInsets.only(left: 5.0, right: 5.0),
                       child: Text("|")),
-                  Text("S'inscrire", style: TextStyle(fontSize: 17.0)),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => SignUp()));
+                    },
+                      child:
+                          Text("S'inscrire", style: TextStyle(fontSize: 17.0))),
                 ],
               ),
               currentAccountPicture: InkWell(
@@ -65,7 +72,9 @@ class _IndexState extends State<Index> {
               decoration: BoxDecoration(color: Colors.blueGrey),
             ),
             InkWell(
-                onTap: null,
+                onTap: (){
+                  Navigator.pop(context);
+                },
                 child: ListTile(
                   leading: Icon(
                     Icons.home,
