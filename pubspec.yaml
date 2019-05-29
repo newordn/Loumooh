@@ -47,6 +47,10 @@ flutter:
   #  - images/a_dot_ham.jpeg
   assets:
     - images/cart.png
+    - images/user.png
+    - images/facebook.png
+    - images/google.png
+    - images/twitter.png
     - images/carousel/m1.jpeg
     - images/carousel/m2.jpg
     - images/carousel/w1.jpeg

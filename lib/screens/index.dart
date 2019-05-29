@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:loumo_app/screens/composants/horizontal.dart';
+import 'package:loumo_app/login_signup/login.dart';
+
 class Index extends StatefulWidget {
   @override
   _IndexState createState() => _IndexState();
 }
 
 class _IndexState extends State<Index> {
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,9 +38,15 @@ class _IndexState extends State<Index> {
               accountName: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  Text(
-                    "Se connecter",
-                    style: TextStyle(fontSize: 17.0),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => MySignUp()));
+                    },
+                    child: Text(
+                      "Se connecter",
+                      style: TextStyle(fontSize: 17.0),
+                    ),
                   ),
                   Container(
                       margin: EdgeInsets.only(left: 5.0, right: 5.0),
@@ -101,7 +108,6 @@ class _IndexState extends State<Index> {
         ),
       ),
       body: buildBody(),
-      
     );
   }
 }
@@ -124,15 +130,9 @@ Widget buildBody() {
       animationDuration: Duration(milliseconds: 1000),
     ),
   );
-  return ListView(
-    children:<Widget>[
-      images_carousel,
-      Padding(
-        padding: EdgeInsets.all(8.0),
-        child: Text("Categories")
-      ),
-      Horizontal()
-    ]
-    
-  );
+  return ListView(children: <Widget>[
+    images_carousel,
+    Padding(padding: EdgeInsets.all(8.0), child: Text("Categories")),
+    Horizontal()
+  ]);
 }
