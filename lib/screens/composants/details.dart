@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Horizontal extends StatelessWidget {
+class Element extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -52,12 +52,25 @@ class Categorie extends StatelessWidget {
                 title: Image.asset(
                   titre,
                   width: 100.0,
-                  height: 70.0,
+                  height: 150.0,
                 ),
-                subtitle: Container(
-                  child: Text(sousTitre, style: TextStyle(fontSize: 13.0, color: Colors.black), textAlign: TextAlign.center,),
+                subtitle: Column(
+                  children: <Widget>[
+                    Container(
+                      child: Text(sousTitre, style: TextStyle(fontSize: 13.0, color: Colors.black), textAlign: TextAlign.center,),
+                    ),
+                    SizedBox(height: 3.0,),
+            ListTile(
+                leading: Icon(Icons.star, color: Colors.black),
+                title: Text("4.0"),
+                trailing: Text("Annonce"),
+              )
+                  ],
                 ),
               ),
-            )));
+              
+            ),
+            
+            ));
   }
 }

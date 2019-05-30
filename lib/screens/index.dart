@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:loumo_app/screens/composants/details.dart' as prefix0;
 import 'package:loumo_app/screens/composants/horizontal.dart';
 import 'package:loumo_app/login_signup/login.dart';
 import 'package:loumo_app/login_signup/signup.dart';
+import 'package:loumo_app/screens/composants/details.dart';
 
 class Index extends StatefulWidget {
   @override
@@ -127,7 +129,10 @@ Widget buildBody() {
     child: Carousel(
       boxFit: BoxFit.cover,
       images: [
-        AssetImage("images/carousel/m1.jpeg"),
+        AssetImage("images/carousel/m/m1.jpg"),
+        AssetImage("images/carousel/m/m2.png"),
+        AssetImage("images/carousel/m/m3.jpg"),
+        // AssetImage("images/carousel/m1.jpeg"),
         // AssetImage("images/carousel/m2.jpg"),
         // AssetImage("images/carousel/w1.jpeg"),
         // AssetImage("images/carousel/w3.jpeg"),
@@ -142,6 +147,12 @@ Widget buildBody() {
   return ListView(children: <Widget>[
     images_carousel,
     Padding(padding: EdgeInsets.all(8.0), child: Text("Categories")),
-    Horizontal()
+    Horizontal(),
+    Padding(
+      padding: EdgeInsets.only(left:8.0, right: 8.0),
+      child: Text("Recommandation"),
+    ),
+    prefix0.Element()
+
   ]);
 }

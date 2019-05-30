@@ -56,6 +56,9 @@ flutter:
     - images/carousel/w1.jpeg
     - images/carousel/w3.jpeg
     - images/carousel/w4.jpeg
+    - images/carousel/m/m1.jpg
+    - images/carousel/m/m2.png
+    - images/carousel/m/m3.jpg
     - images/cats/accessories.png
     - images/cats/boisson.png
     - images/cats/chaussure.png
